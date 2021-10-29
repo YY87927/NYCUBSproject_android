@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_background"
+        android:label="防疫計畫APP"
+        android:roundIcon="@drawable/mask"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.nycu.biosciencepr.resetpassword" />
+        <activity android:name="com.nycu.biosciencepr.forget_password" />
+        <activity android:name="com.nycu.biosciencepr.QRcode" />
+        <activity android:name="com.nycu.biosciencepr.takephoto" />
+
+        <service
+            android:name="com.nycu.biosciencepr.MyFirebaseInstanceIDService"
+            android:exported = "true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/mask" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/pro_paths" />
+        </provider>
+
+        <activity android:name="com.nycu.biosciencepr.verify" />
+        <activity android:name="com.nycu.biosciencepr.register" />
+        <activity
+            android:name="com.nycu.biosciencepr.login"
+            android:screenOrientation="fullSensor" />
+        <activity android:name="com.nycu.biosciencepr.MainActivity"
+            android:exported = "true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+
+</manifest>
