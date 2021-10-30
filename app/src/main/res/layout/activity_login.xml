@@ -10,7 +10,7 @@
         android:id="@+id/loginTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="歡迎使用防疫系統"
+        android:text="歡迎使用實聯制系統"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:text="學號"
+                android:text="帳號"
                 android:textSize="20sp" />
 
             <EditText
@@ -51,7 +51,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:ems="10"
-                android:inputType="text" />
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <Space
                 android:layout_width="0dp"
@@ -80,7 +81,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <Switch
                 android:id="@+id/loginShowPwdSwitch"
@@ -88,7 +90,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:onClick="display"
-                android:text="顯示" />
+                android:text="顯示"
+                tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -114,6 +117,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
+            android:minHeight="48dp"
             android:onClick="forget_password"
             android:text="@string/pass"
             android:textColor="@color/btnColor"
