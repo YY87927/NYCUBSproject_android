@@ -1,6 +1,6 @@
-# djangoapp
+# NYCU門禁打卡
 
-[隱私權公告](https://github.com/wanchunglin/djangoapp/blob/main/%E9%9A%B1%E7%A7%81%E6%AC%8A%E5%85%AC%E5%91%8A.md)請點這裡
+[隱私權公告](https://github.com/YY87927/NYCUBSproject_android/blob/master/%E9%9A%B1%E7%A7%81%E6%AC%8A%E5%85%AC%E5%91%8A.md)請點這裡
 
 This app is used to track the student in university.
 
